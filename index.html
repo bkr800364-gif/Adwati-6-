@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>أدوات مبتدأ | أدوات ذكية للتصفح</title>
+<style>
+:root{--bg:#0b1120;--panel:#121c2f;--panel2:#17243a;--text:#edf3ff;--muted:#9aabc5;--line:#2b3a53;--accent:#7c9cff;--accent2:#64e3c2;--danger:#ff8795}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#182c50 0,transparent 40%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.65}
+.wrap{max-width:1180px;margin:auto;padding:28px 20px 50px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:34px}.brand{display:flex;align-items:center;gap:12px}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;color:#091324;font-weight:900;font-size:24px;box-shadow:0 8px 30px #7c9cff30}.brand h1{font-size:22px;margin:0}.brand p{margin:0;color:var(--muted);font-size:12px}.pill{border:1px solid var(--line);border-radius:99px;padding:7px 12px;color:var(--accent2);font-size:12px}
+.hero{padding:30px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(120deg,#172642dd,#101a2bdd);margin-bottom:25px;position:relative;overflow:hidden}.hero:after{content:"✦";position:absolute;font-size:120px;left:30px;top:-30px;color:#7c9cff12}.eyebrow{color:var(--accent2);font-size:12px;font-weight:bold;letter-spacing:.4px}.hero h2{font-size:clamp(25px,4vw,40px);line-height:1.25;margin:8px 0 12px;max-width:700px}.hero p{color:var(--muted);max-width:680px;margin:0}.searchrow{display:flex;gap:10px;margin:22px 0 26px}.searchrow input{flex:1}
+input,textarea,select{width:100%;background:#0b1424;border:1px solid var(--line);border-radius:12px;color:var(--text);padding:12px 14px;font:inherit;outline:none;min-width:0}input:focus,textarea:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px #7c9cff20}textarea{resize:vertical;min-height:130px}
+button{font:inherit;cursor:pointer;border:0;border-radius:12px;padding:10px 15px;background:var(--accent);color:#091324;font-weight:700;transition:.18s}button:hover{filter:brightness(1.08);transform:translateY(-1px)}button.secondary{background:#23324b;color:var(--text);border:1px solid var(--line)}button.ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}button.small{padding:7px 11px;font-size:12px}
+.sectionhead{display:flex;justify-content:space-between;align-items:end;margin:26px 0 14px;gap:10px}.sectionhead h3{margin:0;font-size:20px}.sectionhead p{margin:0;color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.toolcard{background:linear-gradient(180deg,var(--panel),#10192a);border:1px solid var(--line);border-radius:18px;padding:19px;min-height:170px;cursor:pointer;transition:.2s}.toolcard:hover{border-color:#6f8fe0;transform:translateY(-3px);box-shadow:0 12px 32px #0002}.toolicon{width:43px;height:43px;border-radius:13px;background:#233552;display:grid;place-items:center;font-size:22px;margin-bottom:13px}.toolcard h4{margin:0 0 5px;font-size:16px}.toolcard p{color:var(--muted);font-size:13px;margin:0}.toolcard .openhint{display:block;color:var(--accent2);font-size:12px;margin-top:12px}
+.workspace{margin-top:25px;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:22px;display:none}.workspace.active{display:block;animation:up .22s ease}@keyframes up{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}.workhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}.workhead h3{margin:0;font-size:22px}.workhead p{margin:3px 0 0;color:var(--muted);font-size:13px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field label{display:block;color:var(--muted);font-size:13px;margin-bottom:7px}.field.full{grid-column:1/-1}.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:13px}.result{margin-top:15px;padding:14px;border-radius:12px;background:#0b1424;border:1px solid var(--line);white-space:pre-wrap;overflow-wrap:anywhere;min-height:48px}.status{font-size:12px;color:var(--accent2);margin-top:8px;min-height:20px}.statline{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:13px;margin-top:10px}.statline b{color:var(--text)}.colorpreview{height:95px;border-radius:14px;border:1px solid var(--line);margin-top:14px}.footer{border-top:1px solid var(--line);margin-top:34px;padding-top:18px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:23px}.top{align-items:flex-start}}@media(max-width:540px){.wrap{padding:18px 13px 35px}.grid,.formgrid{grid-template-columns:1fr}.hero h2{font-size:27px}.searchrow{flex-direction:column}.pill{display:none}.workspace{padding:16px}.toolcard{min-height:150px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="brand"><div class="logo">أ</div><div><h1>أدوات مبتدأ</h1><p>مساحة واحدة لأدواتك اليومية على الويب</p></div></div><span class="pill">نسخة 1.0 · تعمل داخل المتصفح</span></header>
+<section class="hero"><span class="eyebrow">بسيطة · سريعة · عملية</span><h2>ست أدوات ذكية، جاهزة لمساعدتك في التصفح والعمل.</h2><p>نسّق البيانات، تعامل مع الروابط والنصوص، أنشئ كلمات مرور قوية، واحصل على إحصاءات فورية — بدون حساب أو تسجيل دخول.</p></section>
+<div class="searchrow"><input id="search" type="search" placeholder="ابحث عن أداة… مثل JSON أو كلمات المرور" aria-label="البحث عن أداة"><button class="secondary" id="clearSearch">مسح البحث</button></div>
+<div class="sectionhead"><div><h3>الأدوات المتاحة</h3><p>اختر أداة لفتح مساحة العمل الخاصة بها</p></div><span class="pill">6 أدوات</span></div>
+<div class="grid" id="toolGrid">
+<div class="toolcard" data-tool="json" data-terms="json بيانات تنسيق تحقق"><div class="toolicon">⌘</div><h4>منسّق JSON</h4><p>رتّب بيانات JSON وتحقق من صحتها بسهولة.</p><span class="openhint">فتح الأداة ←</span></div>
+<div class="toolcard" data-tool="url" data-terms="url رابط روابط ترميز فك الترميز"><div class="toolicon">🔗</div><h4>مشفّر الروابط</h4><p>شفّر النصوص داخل الروابط أو فك ترميزها.</p><span class="openhint">فتح الأداة ←</span></div>
+<div class="toolcard" data-tool="base64" data-terms="base64 نص ترميز فك الترميز"><div class="toolicon">⇄</div><h4>أداة Base64</h4><p>حوّل النص إلى Base64 أو أعده إلى نص مقروء.</p><span class="openhint">فتح الأداة ←</span></div>
+<div class="toolcard" data-tool="words" data-terms="كلمات حروف نص عداد كتابة"><div class="toolicon">📝</div><h4>عداد النصوص</h4><p>احسب الكلمات والحروف والجمل ووقت القراءة.</p><span class="openhint">فتح الأداة ←</span></div>
+<div class="toolcard" data-tool="password" data-terms="كلمة مرور كلمات سر عشوائي أمان"><div class="toolicon">🔐</div><h4>مولّد كلمات المرور</h4><p>أنشئ كلمة مرور عشوائية بخيارات قابلة للتعديل.</p><span class="openhint">فتح الأداة ←</span></div>
+<div class="toolcard" data-tool="color" data-terms="ألوان لون تدرج gradient hex تصميم"><div class="toolicon">🎨</div><h4>استوديو الألوان</h4><p>استكشف لونًا بصيغة HEX وأنشئ تدرجًا لونيًا.</p><span class="openhint">فتح الأداة ←</span></div>
+</div>
+<section class="workspace" id="workspace" aria-live="polite">
+<div class="workhead"><div><h3 id="workTitle">الأداة</h3><p id="workDesc"></p></div><button class="ghost small" id="closeWork">إغلاق ✕</button></div>
+<div id="workBody"></div><div class="status" id="status" role="status"></div>
+</section>
+<footer class="footer"><span>© أدوات مبتدأ — صُمّمت لتكون خفيفة وسهلة الاستخدام.</span><span>معالجة محلية داخل المتصفح · لا يتم إرسال مدخلاتك إلى خادم</span></footer>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+const workspace=$('#workspace'), body=$('#workBody'), status=$('#status');
+const descriptions={
+json:['منسّق JSON','تحقق من صحة JSON ورتّبه أو صغّره.'],
+url:['مشفّر الروابط','استخدم الترميز المناسب للنصوص داخل عناوين الويب.'],
+base64:['أداة Base64','حوّل النصوص إلى Base64 أو فكّ ترميزها.'],
+words:['عداد النصوص','اكتب أو الصق نصًا للحصول على إحصاءات مباشرة.'],
+password:['مولّد كلمات المرور','أنشئ كلمة مرور عشوائية باستخدام مولّد الأرقام الآمن في المتصفح.'],
+color:['استوديو الألوان','اختر لونين وعاين التدرج وانسخ قيم الألوان.']
+};
+function field(label,id,placeholder='',type='text',value=''){return `<div class="field"><label for="${id}">${label}</label><input id="${id}" type="${type}" placeholder="${placeholder}" value="${value}"></div>`}
+function area(label,id,placeholder=''){return `<div class="field full"><label for="${id}">${label}</label><textarea id="${id}" placeholder="${placeholder}"></textarea></div>`}
+function buttons(items){return `<div class="actions">${items.map(x=>`<button ${x.secondary?'class="secondary"':''} id="${x.id}">${x.label}</button>`).join('')}</div>`}
+function openTool(name){
+const [title,desc]=descriptions[name];$('#workTitle').textContent=title;$('#workDesc').textContent=desc;status.textContent='';workspace.classList.add('active');
+const views={
+json:()=>area('بيانات JSON','jsonInput','ألصق بيانات JSON هنا…')+buttons([{id:'jsonFormat',label:'تنسيق JSON'},{id:'jsonMin',label:'تصغير الحجم',secondary:true},{id:'jsonCopy',label:'نسخ النتيجة',secondary:true}])+'<div class="result" id="jsonResult">ستظهر النتيجة هنا.</div>',
+url:()=>area('النص أو الرابط','urlInput','اكتب النص المراد تحويله…')+buttons([{id:'urlEncode',label:'ترميز النص'},{id:'urlDecode',label:'فك الترميز',secondary:true},{id:'urlCopy',label:'نسخ النتيجة',secondary:true}])+'<div class="result" id="urlResult">ستظهر النتيجة هنا.</div>',
+base64:()=>area('النص أو Base64','b64Input','اكتب النص هنا…')+buttons([{id:'b64Encode',label:'تحويل إلى Base64'},{id:'b64Decode',label:'فك Base64',secondary:true},{id:'b64Copy',label:'نسخ النتيجة',secondary:true}])+'<div class="result" id="b64Result">ستظهر النتيجة هنا.</div>',
+words:()=>area('النص','wordsInput','ابدأ الكتابة أو ألصق النص هنا…')+'<div class="statline"><span>الكلمات: <b id="wordCount">0</b></span><span>الحروف: <b id="charCount">0</b></span><span>بدون مسافات: <b id="noSpaceCount">0</b></span><span>الجمل: <b id="sentenceCount">0</b></span><span>وقت القراءة: <b id="readTime">0 دقيقة</b></span></div>',
+password:()=>`<div class="formgrid">${field('طول كلمة المرور','passLength','','number','16')}<div class="field"><label for="passCount">عدد كلمات المرور</label><select id="passCount"><option>1</option><option>3</option><option>5</option><option>10</option></select></div><div class="field full"><label><input id="passUpper" type="checkbox" checked style="width:auto;margin-left:7px"> أحرف كبيرة A–Z</label><label><input id="passLower" type="checkbox" checked style="width:auto;margin-left:7px"> أحرف صغيرة a–z</label><label><input id="passNumbers" type="checkbox" checked style="width:auto;margin-left:7px"> أرقام 0–9</label><label><input id="passSymbols" type="checkbox" style="width:auto;margin-left:7px"> رموز خاصة</label></div></div>${buttons([{id:'makePass',label:'إنشاء كلمات المرور'},{id:'passCopy',label:'نسخ الكل',secondary:true}])}<div class="result" id="passResult">اضغط «إنشاء كلمات المرور» للبدء.</div>`,
+color:()=>`<div class="formgrid">${field('اللون الأول (HEX)','color1','','text','#7C9CFF')}${field('اللون الثاني (HEX)','color2','','text','#64E3C2')}</div><div class="actions"><button id="colorApply">تحديث التدرج</button><button id="colorCopy" class="secondary">نسخ CSS</button></div><div class="colorpreview" id="colorPreview"></div><div class="result" id="colorResult">background: linear-gradient(135deg, #7C9CFF, #64E3C2);</div>`
+};
+body.innerHTML=views[name]();workspace.scrollIntoView({behavior:'smooth',block:'start'});
+const listen=(id,fn)=>{const el=$('#'+id);if(el)el.addEventListener('click',fn)};
+const setStatus=t=>status.textContent=t;
+const copy=async text=>{try{await navigator.clipboard.writeText(text);setStatus('تم النسخ بنجاح.')}catch(e){setStatus('تعذّر النسخ تلقائيًا؛ حدّد النتيجة وانسخها يدويًا.')}};
+if(name==='json'){
+const act=min=>{try{const v=JSON.parse($('#jsonInput').value);$('#jsonResult').textContent=min?JSON.stringify(v):JSON.stringify(v,null,2);setStatus('JSON صحيح ✓')}catch(e){$('#jsonResult').textContent='خطأ: '+e.message;setStatus('يرجى مراجعة صيغة JSON.')}};
+listen('jsonFormat',()=>act(false));listen('jsonMin',()=>act(true));listen('jsonCopy',()=>copy($('#jsonResult').textContent));
+}
+if(name==='url'){
+listen('urlEncode',()=>{try{$('#urlResult').textContent=encodeURIComponent($('#urlInput').value);setStatus('تم ترميز النص.')}catch(e){setStatus('تعذّر الترميز.')}});
+listen('urlDecode',()=>{try{$('#urlResult').textContent=decodeURIComponent($('#urlInput').value);setStatus('تم فك الترميز.')}catch(e){$('#urlResult').textContent='تعذّر فك الترميز: تحقق من النص.';setStatus('صيغة الترميز غير صحيحة.')}});
+listen('urlCopy',()=>copy($('#urlResult').textContent));
+}
+if(name==='base64'){
+listen('b64Encode',()=>{try{$('#b64Result').textContent=btoa(unescape(encodeURIComponent($('#b64Input').value)));setStatus('تم التحويل إلى Base64.')}catch(e){setStatus('تعذّر التحويل.')}});
+listen('b64Decode',()=>{try{$('#b64Result').textContent=decodeURIComponent(escape(atob($('#b64Input').value.trim())));setStatus('تم فك الترميز.')}catch(e){$('#b64Result').textContent='النص ليس Base64 صالحًا أو لا يحتوي على نص UTF-8.';setStatus('تعذّر فك الترميز.')}});
+listen('b64Copy',()=>copy($('#b64Result').textContent));
+}
+if(name==='words'){
+const update=()=>{const t=$('#wordsInput').value.trim();$('#wordCount').textContent=t?t.split(/\s+/u).length:0;$('#charCount').textContent=$('#wordsInput').value.length;$('#noSpaceCount').textContent=$('#wordsInput').value.replace(/\s/g,'').length;$('#sentenceCount').textContent=t?(t.match(/[.!؟?]+/g)||[]).length:0;$('#readTime').textContent=(t?Math.max(1,Math.ceil(t.split(/\s+/u).length/200)):0)+' دقيقة';};$('#wordsInput').addEventListener('input',update);
+}
+if(name==='password'){
+listen('makePass',()=>{const len=Number($('#passLength').value);if(!Number.isInteger(len)||len<8||len>128){setStatus('اختر طولًا بين 8 و128 حرفًا.');return}let chars='';if($('#passUpper').checked)chars+='ABCDEFGHJKLMNPQRSTUVWXYZ';if($('#passLower').checked)chars+='abcdefghijkmnopqrstuvwxyz';if($('#passNumbers').checked)chars+='23456789';if($('#passSymbols').checked)chars+='!@#$%&*_-+=?';if(!chars){setStatus('اختر نوعًا واحدًا على الأقل من الأحرف.');return}if(!window.crypto?.getRandomValues){setStatus('المتصفح لا يدعم مولّدًا آمنًا؛ جرّب متصفحًا حديثًا.');return}const arr=Array.from({length:Number($('#passCount').value)},()=>{const bytes=new Uint32Array(len);crypto.getRandomValues(bytes);return Array.from(bytes,b=>chars[b%chars.length]).join('')});$('#passResult').textContent=arr.join('\n');setStatus('تم الإنشاء. احفظ كلمة المرور في مدير كلمات مرور موثوق.');});
+listen('passCopy',()=>copy($('#passResult').textContent));
+}
+if(name==='color'){
+const apply=()=>{let a=$('#color1').value.trim(),b=$('#color2').value.trim();if(!/^#[0-9a-f]{6}$/i.test(a)||!/^#[0-9a-f]{6}$/i.test(b)){setStatus('أدخل لونين بصيغة HEX مثل #7C9CFF.');return}a=a.toUpperCase();b=b.toUpperCase();const css=`background: linear-gradient(135deg, ${a}, ${b});`;$('#colorPreview').style.background=`linear-gradient(135deg, ${a}, ${b})`;$('#colorResult').textContent=css;setStatus('تم تحديث التدرج.');};listen('colorApply',apply);listen('colorCopy',()=>copy($('#colorResult').textContent));apply();
+}
+}
+document.querySelectorAll('.toolcard').forEach(card=>card.addEventListener('click',()=>openTool(card.dataset.tool)));
+$('#closeWork').addEventListener('click',()=>workspace.classList.remove('active'));
+$('#search').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();document.querySelectorAll('.toolcard').forEach(c=>c.style.display=(c.innerText+' '+c.dataset.terms).toLowerCase().includes(q)?'':'none')});
+$('#clearSearch').addEventListener('click',()=>{$('#search').value='';document.querySelectorAll('.toolcard').forEach(c=>c.style.display='');$('#search').focus()});
+</script>
+</body>
+</html>
